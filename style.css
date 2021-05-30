@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  border-bottom: 1px solid #e2e8f0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.harmburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-item {
+  margin-left: 5rem;
+}
+.nav-link {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #475569;
+}
+.nav-link:hover {
+  color: #482ff7;
+}
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #482ff7;
+}
+
+
+input {
+  width: 80%;
+  margin: 20px 20px;
+  padding: 12px 20px;
+  outline: none;
+  border: 1px solid #475569;
+  border-radius:8px;
+}
+input:focus{
+    box-shadow: 0 0 20px #e2e8f0;
+}
+button{
+     background-color: #e2e8f0;
+     border: 1px solid #475569;
+     border-radius: 8px;
+     text-align: center;
+     padding: 12px 20px;
+     cursor: pointer;
+     outline: none;
+     
+}
+button:hover{
+    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.24), 0 5px 8px 0 rgba(0,0,0,0.19);
+
+}
+/* media queries */
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .harmburger {
+    display: block;
+    cursor: pointer;
+  }
+  .harmburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .harmburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .harmburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  input{
+      width: 90%;
+  }
+  button{
+      width: 90%;
+      margin: 8px 20px;
+  }
+}
+.validate{
+  display: none;
+}
+
+.danger{
+  color:rgb(255, 1, 1);
+  text-align: center;
+  margin-top: none;
+  margin-bottom: 8px;
+
+}
