@@ -99,21 +99,44 @@ button:hover {
 }
 .user-avatar {
   border-radius: 50%;
-  height: 50%;
+  height: auto;
   margin: 20px;
 }
 .user-name {
   text-decoration: none;
-  margin-left: 95px;
+  text-align: center;
+  margin-left: 45px;
   text-transform: capitalize;
   font-size: 18px;
 }
 .user-bio {
   text-decoration: none;
+  text-align: center;
   margin-left: 50px;
   margin-top: 15px;
   font-size: 14px;
   color: grey;
+}
+.user-card{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #c9c9c9;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+}
+.repo-name{
+  color: blue ;
+}
+.repo-desc{
+  color: grey;
+  margin: 10px;
+}
+span{
+  margin: 20px;
+}
+.fa-circle{
+  color: green;
 }
 /* media queries */
 @media only screen and (max-width: 768px) {
@@ -170,5 +193,13 @@ button:hover {
   .user-bio{
     text-align: center;
     margin-left: auto;
+  }
+  .user-card{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #c9c9c9;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  
   }
 }

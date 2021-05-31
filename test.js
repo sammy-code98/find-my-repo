@@ -4,13 +4,7 @@ button.addEventListener("click", submit);
 function submit() {
   var query = document.getElementById("username").value;
 
-  // console.log({e,query});
-  // event.preventDefault();
-
-
- 
-
-  const token = "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";
+  const token = "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";
   fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
@@ -66,26 +60,45 @@ function submit() {
     .then((data) => {
       query = "";
       let result = data.data.search.edges[0].node;
+      var _html = "";
+      for (var i = 0; i < result.repositories.nodes.length; i++) {
+        var repo = `<div class="user-card">
+        <h4 class="repo-name">${result.repositories.nodes[i].name}</h4>
+       <p class="repo-desc">${result.repositories.nodes[i].description}</p>
+       <span class="fas fa-circle" >${
+         result.repositories.nodes[i].primaryLanguage
+           ? result.repositories.nodes[i].primaryLanguage.name
+           : "null"
+       }</span>
+      <span class="far fa-star">${result.repositories.nodes[i].stargazers.totalCount}</span> 
 
-      // console.log(data.data.search.edges[0].node);
+       <span class="fas fa-code-branch">${result.repositories.nodes[i].forkCount}</span>
+       
+
+       
+       <span>Updated on  ${result.repositories.nodes[i].updatedAt}</span>
+
+       
+       </div>`;
+        _html += repo;
+      }
+
       document.getElementById("user-details").innerHTML = `
        <div class="details-container">
        <div>
        <img class="user-avatar" src=${result.avatarUrl}></img>
        <h1 class="user-name">${result.name}</h1>
        <p class="user-bio">${result.bio}</p>
+       
       </div>
 
        <div>
-       <div>${result.repositories}</div>
+       <div>${_html}</div>
        </div>
 
        
        </div>
       `;
-    
-console.log(result.repositories);
     })
     .catch((err) => console.log(JSON.stringify(err)));
-  //
 }
