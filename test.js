@@ -1,8 +1,9 @@
-import MY_TOKEN from './apikey.js';
 let button = document.getElementById("search");
 const userDetails = document.getElementById("user-details");
 button.addEventListener("click", submit);
 function submit() {
+  import MY_TOKEN from './apikey.js';
+
   var query = document.getElementById("username").value;
   // const token = "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";
   fetch("https://api.github.com/graphql", {
