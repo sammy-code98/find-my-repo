@@ -52,12 +52,10 @@ a {
 .nav-link:hover {
   color: #482ff7;
 }
-.nav-logo {
-  font-size: 2.1rem;
-  font-weight: 400;
-  color: #482ff7;
+.logo {
+  border-radius: 50%;
+  width: 40px;
 }
-
 
 input {
   width: 80%;
@@ -65,24 +63,57 @@ input {
   padding: 12px 20px;
   outline: none;
   border: 1px solid #475569;
-  border-radius:8px;
+  border-radius: 8px;
 }
-input:focus{
-    box-shadow: 0 0 20px #e2e8f0;
+input:focus {
+  box-shadow: 0 0 20px #e2e8f0;
 }
-button{
-     background-color: #e2e8f0;
-     border: 1px solid #475569;
-     border-radius: 8px;
-     text-align: center;
-     padding: 12px 20px;
-     cursor: pointer;
-     outline: none;
-     
+button {
+  background-color: #e2e8f0;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  outline: none;
 }
-button:hover{
-    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.24), 0 5px 8px 0 rgba(0,0,0,0.19);
+button:hover {
+  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.24), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+}
+.validate {
+  display: none;
+}
 
+.danger {
+  color: rgb(255, 1, 1);
+  text-align: center;
+  margin-top: none;
+  margin-bottom: 8px;
+}
+
+.details-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-avatar {
+  border-radius: 50%;
+  height: 50%;
+  margin: 20px;
+}
+.user-name {
+  text-decoration: none;
+  margin-left: 95px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.user-bio {
+  text-decoration: none;
+  margin-left: 50px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: grey;
 }
 /* media queries */
 @media only screen and (max-width: 768px) {
@@ -117,22 +148,27 @@ button:hover{
   .harmburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  input{
-      width: 90%;
+  input {
+    width: 90%;
   }
-  button{
-      width: 90%;
-      margin: 8px 20px;
+  button {
+    width: 90%;
+    margin: 8px 20px;
   }
-}
-.validate{
-  display: none;
-}
-
-.danger{
-  color:rgb(255, 1, 1);
-  text-align: center;
-  margin-top: none;
-  margin-bottom: 8px;
-
+  .details-container {
+    display: block;
+  }
+  .user-avatar {
+    max-width: 80%;
+    height: auto;
+    margin: 20px 45px;
+  }
+  .user-name{
+    text-align: center;
+    margin: auto;
+  }
+  .user-bio{
+    text-align: center;
+    margin-left: auto;
+  }
 }
