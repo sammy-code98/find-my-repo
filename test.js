@@ -1,15 +1,15 @@
+import MY_TOKEN from './apikey.js';
 let button = document.getElementById("search");
 const userDetails = document.getElementById("user-details");
 button.addEventListener("click", submit);
 function submit() {
   var query = document.getElementById("username").value;
-
-  const token = "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";
+  // const token = "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";
   fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "bearer " + token,
+      Authorization: "bearer " + MY_TOKEN,
     },
 
     body: JSON.stringify({
