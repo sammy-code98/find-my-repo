@@ -68,16 +68,16 @@ function submit() {
         var repo = `<div class="user-card">
         <h4 class="repo-name">${result.repositories.nodes[i].name}</h4>
        <p class="repo-desc">${result.repositories.nodes[i].description}</p>
-       <span class="fas fa-circle" >${
+       <span class="fas fa-circle"> ${
          result.repositories.nodes[i].primaryLanguage
            ? result.repositories.nodes[i].primaryLanguage.name
            : "null"
        }</span>
-      <span class="far fa-star">${
+      <span class="far fa-star"> ${
         result.repositories.nodes[i].stargazers.totalCount
       }</span> 
 
-       <span class="fas fa-code-branch">${
+       <span class="fas fa-code-branch"> ${
          result.repositories.nodes[i].forkCount
        }</span>
        
