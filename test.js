@@ -1,11 +1,13 @@
-import MY_TOKEN from './apikey.js';
+import MY_TOKEN from "./apikey.js";
 let button = document.getElementById("search");
 const userDetails = document.getElementById("user-details");
+const spinner = document.getElementById("spinner");
 button.addEventListener("click", submit);
 function submit() {
   var query = document.getElementById("username").value;
   // const token = "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";
-  fetch("https://api.github.com/graphql", {
+  spinner.removeAttribute("hidden");
+  fetch("https://api.github.com/graphql?delay=9000ms", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -58,6 +60,7 @@ function submit() {
   })
     .then((res) => res.json())
     .then((data) => {
+      spinner.setAttribute("hidden", query);
       query = "";
       let result = data.data.search.edges[0].node;
       var _html = "";
@@ -70,9 +73,13 @@ function submit() {
            ? result.repositories.nodes[i].primaryLanguage.name
            : "null"
        }</span>
-      <span class="far fa-star">${result.repositories.nodes[i].stargazers.totalCount}</span> 
+      <span class="far fa-star">${
+        result.repositories.nodes[i].stargazers.totalCount
+      }</span> 
 
-       <span class="fas fa-code-branch">${result.repositories.nodes[i].forkCount}</span>
+       <span class="fas fa-code-branch">${
+         result.repositories.nodes[i].forkCount
+       }</span>
        
 
        
