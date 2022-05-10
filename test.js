@@ -27,7 +27,7 @@ function submit() {
                   bio
                   avatarUrl
                   
-                  repositories(first:20){
+                  repositories(first:100){
                     nodes{
                       name
                       description
