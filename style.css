@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color:#cdd9e5;
+  background:#2d333b;
+
+  /* #2d333b */
 }
 html {
   font-size: 100%;
@@ -34,7 +38,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #cdd9e5;
 }
 .nav-menu {
   display: flex;
@@ -47,10 +51,10 @@ a {
 .nav-link {
   font-size: 1rem;
   font-weight: 200;
-  color: #475569;
+  color: #cdd9e5;
 }
 .nav-link:hover {
-  color: #482ff7;
+  color: #adbac7;
 }
 .logo {
   border-radius: 50%;
