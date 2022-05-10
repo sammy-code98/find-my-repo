@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color:#cdd9e5;
+  background:#2d333b;
+
+  /* #2d333b */
 }
 html {
   font-size: 100%;
@@ -16,7 +20,7 @@ a {
   text-decoration: none;
 }
 .header {
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #cdd9e5;
 }
 .navbar {
   display: flex;
@@ -34,7 +38,7 @@ a {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #cdd9e5;
 }
 .nav-menu {
   display: flex;
@@ -47,10 +51,10 @@ a {
 .nav-link {
   font-size: 1rem;
   font-weight: 200;
-  color: #475569;
+  color: #cdd9e5;
 }
 .nav-link:hover {
-  color: #482ff7;
+  color: #adbac7;
 }
 .logo {
   border-radius: 50%;
@@ -59,18 +63,18 @@ a {
 
 input {
   width: 80%;
-  margin: 20px 20px;
+  margin: 40px 20px;
   padding: 12px 20px;
   outline: none;
-  border: 1px solid #475569;
+  border: 1px solid #cdd9e5;
   border-radius: 8px;
 }
 input:focus {
-  box-shadow: 0 0 20px #e2e8f0;
+  box-shadow: 0 0 20px #cdd9e5;
 }
 button {
-  background-color: #e2e8f0;
-  border: 1px solid #475569;
+  background-color: #2d333b;
+  border: 1px solid #cdd9e5;
   border-radius: 8px;
   text-align: center;
   padding: 12px 20px;
