@@ -149,7 +149,7 @@ span{
   margin: 20px;
 }
 .fa-circle{
-  color: green;
+  color: #e34c26;
 }
 /* spinner */
 #spinner:not([hidden]){

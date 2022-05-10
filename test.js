@@ -110,10 +110,3 @@ function submit() {
     .catch((err) => console.log(JSON.stringify(err)));
 }
 
-function setBg() {
-  const randColor = Math.floor(Math.random() * 16777215).toString(16);
-  document.querySelector(".fa-circle").style.color = "#" + randColor;
-  color.innerHTML = "#" + randColor;
-
-}
-setBg();  
