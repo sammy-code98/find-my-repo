@@ -112,7 +112,7 @@ function submit() {
 
 function setBg() {
   const randColor = Math.floor(Math.random() * 16777215).toString(16);
-  document.querySelector(".rando").style.backgroundColor = "#" + randColor;
+  document.querySelector(".fa-circle").style.color = "#" + randColor;
   color.innerHTML = "#" + randColor;
 
 }
