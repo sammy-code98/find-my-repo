@@ -27,7 +27,7 @@ function submit() {
                   bio
                   avatarUrl
                   
-                  repositories(first:20){
+                  repositories(first:100){
                     nodes{
                       name
                       description
@@ -68,7 +68,7 @@ function submit() {
         var repo = `<div class="user-card">
         <h4 class="repo-name">${result.repositories.nodes[i].name}</h4>
        <p class="repo-desc">${result.repositories.nodes[i].description}</p>
-       <span class="fas fa-circle"> ${
+       <span class="fas fa-circle random"> ${
          result.repositories.nodes[i].primaryLanguage
            ? result.repositories.nodes[i].primaryLanguage.name
            : "null"
