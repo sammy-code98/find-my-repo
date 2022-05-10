@@ -68,7 +68,7 @@ function submit() {
         var repo = `<div class="user-card">
         <h4 class="repo-name">${result.repositories.nodes[i].name}</h4>
        <p class="repo-desc">${result.repositories.nodes[i].description}</p>
-       <span class="fas fa-circle random"> ${
+       <span class="fas fa-circle rando"> ${
          result.repositories.nodes[i].primaryLanguage
            ? result.repositories.nodes[i].primaryLanguage.name
            : "null"
@@ -109,3 +109,11 @@ function submit() {
     })
     .catch((err) => console.log(JSON.stringify(err)));
 }
+
+function setBg() {
+  const randColor = Math.floor(Math.random() * 16777215).toString(16);
+  document.querySelector(".rando").style.backgroundColor = "#" + randColor;
+  color.innerHTML = "#" + randColor;
+
+}
+setBg();  
