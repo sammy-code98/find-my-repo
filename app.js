@@ -19,12 +19,6 @@ window.onload = function () {
     navMenu.classList.remove("active");
   }
 
-  function setBg() {
-    const randColor = Math.floor(Math.random() * 16777215).toString(16);
-    document.querySelector(".random").style.backgroundColor = "#" + randColor;
-    color.innerHTML = "#" + randColor;
-
-  }
-  setBg();
+ 
 
 };
