@@ -112,6 +112,7 @@ button:hover {
   margin-left: 45px;
   text-transform: capitalize;
   font-size: 18px;
+  color:#cdd9e5;
 }
 .user-bio {
   text-decoration: none;
@@ -127,13 +128,17 @@ button:hover {
   border: 1px solid #c9c9c9;
   margin-top: 40px;
   margin-bottom: 20px;
+  border-radius:8px;
+  box-shadow: 0 0 20px #cdd9e5;
+
 
 }
 .repo-name{
-  color: blue ;
+  color: #cdd9e5 ;
+  font-weight: bold;
 }
 .repo-desc{
-  color: grey;
+  color: #cdd9e5;
   margin: 10px;
 }
 span{
@@ -181,7 +186,7 @@ span{
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #2d333b;
     width: 100%;
     border-radius: 10px;
     text-align: center;
